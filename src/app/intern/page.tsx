@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowUpRight, ClipboardList, Settings2 } from "lucide-react";
+import { Eyebrow, SectionTitle, Surface } from "@/components/ui";
+export const metadata: Metadata = { title: "Interne Verwaltung" };
+export default function InternPage() { return <main className="page-main"><section className="wrap admin-page"><Eyebrow>Interner Bereich</Eyebrow><SectionTitle>Verwaltung vorbereiten.</SectionTitle><p className="workspace-lead">Diese Struktur skizziert interne Arbeitsbereiche. Zugriff, Rollen und Abläufe sind noch nicht implementiert.</p><div className="workspace-cards"><Surface><span className="feature-icon"><ClipboardList size={20} /></span><h2>Einsätze verwalten</h2><p>Übersicht für Inhalt und Organisation von Einsatzmöglichkeiten.</p><Link className="card-link" href="/intern/einsaetze">Bereich öffnen <ArrowUpRight size={16} /></Link></Surface><Surface><span className="feature-icon"><Settings2 size={20} /></span><h2>Administration</h2><p>Platzhalter für systemweite Einstellungen und Zuständigkeiten.</p><Link className="card-link" href="/administration">Administration öffnen <ArrowUpRight size={16} /></Link></Surface></div></section></main>; }
