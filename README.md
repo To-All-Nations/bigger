@@ -49,6 +49,12 @@ Der [Figma-Entwurf](https://www.figma.com/design/I3Ddw9PxZvECuqAFyMJouc/BIGGER-%
 
 Die Seitenstruktur und das vorläufige Farbsystem greifen diese Richtung auf. Die gezeigten Stockfotos und der vollständige Brand-/Typografie-Token-Satz aus Figma sind noch nicht exportiert und werden daher nicht als vermeintlich exakte Assets ausgegeben.
 
+### Umgesetzter öffentlicher Flow: Einsatzübersicht → Einsatzdetail
+
+`/einsaetze` und `/einsaetze/[slug]` bilden den öffentlichen Flow 02 mit zwei lokalen, ausdrücklich als Demo gekennzeichneten Figma-Beispielen („Quartiersküche unterstützen“ und „Naturcamp für Jugendliche“) ab. Karten und Detailseite zeigen Bildplatzhalter sowie Zeitraum, Ort, Kosten/Beitrag, Anmeldefrist und Kapazität. Die Detailseite gliedert Beschreibung, verpflichtende und optionale Voraussetzungen sowie Dokumente. Jede Karte öffnet ihr passendes Detail; der Rücklink führt zur Übersicht. Unbekannte Slugs zeigen die vorhandene 404-Ansicht. Es gibt keine Filter, Anmeldung, externen Abrufe oder Supabase-Aufrufe.
+
+Die Daten liegen zentral in `src/lib/demo/deployments.ts`, damit eine spätere Datenquelle die UI-Datenform ersetzen kann. Nur Einsatznamen stammen aus dem Figma-Screen; konkrete Einsatzdaten und Inhalte sind dort nicht ausreichend eindeutig übernommen und bleiben daher als „Demoangabe folgt“ bzw. als offene fachliche Platzhalter stehen. Die Figma-Fotos und finalen Markenmittel fehlen lokal; sichtbar sind deshalb ausdrücklich gekennzeichnete, neutrale Bildflächen. Diese Platzhalter sind keine finalgetreuen Bilder.
+
 | Bereich | Lokaler Stand |
 | --- | --- |
 | Öffentliche Website | Startseite, Navigation und Einstieg; Gestaltung noch nicht fachlich abgenommen |
